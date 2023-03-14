@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: cyan;
+        }
+        h1 {
+            text-align:center;
+        }
+        #seduce {
+            text-align: center;
+        }
+        #name {
+            display: none;
+            text-align: center;
+        }
+        button {
+            margin-left: 47%;
+        }
+    </style>
+    <body>
+        <h1>A Simple Calculator</h1>
+        <table>
+            <tbody>
+                <td>
+                    <p>1st Number</p>
+                </td>
+                <td>
+                    <input id="1" onkeyup="Math()">
+                </td>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <td>
+                    <p>2nd Number</p>
+                </td>
+                <td>
+                    <input id="2" onkeyup="Math()">
+                </td>
+            </tbody>
+        </table> 
+        <h2>
+            Auto Sum
+        </h2>
+        <input id="sum">
+        <h2>
+            Auto Divide
+        </h2>
+        <input id="divide">
+        <h2>
+            Auto Multiply
+        </h2>
+        <input id="mul">
+        <h2 id="seduce">Click the button to reveal my name</h2>
+        <button onclick="Click()">My Name</button>
+        <h2 id="name">TAN YOU REN</h2>
+    </body>
+    <script>
+        sum = document.getElementById('sum').value;
+        a = document.getElementById('1');
+        b = document.getElementById('2');
+        function Math() {
+        	document.getElementById("sum").value = parseInt(a.value) + parseInt(b.value);
+            document.getElementById("divide").value = parseInt(a.value) / parseInt(b.value);
+            document.getElementById("mul").value = parseInt(a.value) * parseInt(b.value);
+        }
+        function Click() {
+            if (document.getElementById('name').style.display == "block") {
+                document.getElementById('name').style.display = "none";
+            } else {
+                document.getElementById('name').style.display = "block";
+            }
+        }
+    </script>
+</html>
