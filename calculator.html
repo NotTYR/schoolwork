@@ -54,7 +54,6 @@
         <input id="mul">
         <h2 id="seduce">Click the button to reveal my name</h2>
         <button onclick="Click()">My Name</button>
-        <h2 id="name">TAN YOU REN</h2>
     </body>
     <script>
         sum = document.getElementById('sum').value;
@@ -66,11 +65,7 @@
             document.getElementById("mul").value = parseInt(a.value) * parseInt(b.value);
         }
         function Click() {
-            if (document.getElementById('name').style.display == "block") {
-                document.getElementById('name').style.display = "none";
-            } else {
-                document.getElementById('name').style.display = "block";
-            }
+            document.getElementById("seduce").innerHTML = "You Ren";
         }
     </script>
 </html>
