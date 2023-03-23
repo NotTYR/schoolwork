@@ -1,1 +1,1 @@
-# Copy if you want
+# only for tyr
