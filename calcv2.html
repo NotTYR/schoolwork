@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-color: cyan;
+        }
+        h1 {
+            text-align: center;
+        }
+        #container {
+            padding: 5rem;
+            margin: 8rem;
+            border: 5px solid rgb(204, 197, 197);
+        }
+        .space {
+            width: 5px;
+            height: 30px;
+        }
+        #buttons{
+            display: flex;
+        }
+        footer {
+        	text-align:center;
+        }
+    </style>
+    <body>
+        <h1>Calculator v2.0</h1>
+        <div id="container">
+            <span>
+                x:
+            </span>
+            <input id="x">
+            <br>
+            <span>
+                y:
+            </span>
+            <input id="y">
+            <div class="space"></div>
+            <div id="buttons">
+                <button onclick="f(1)">xʸ</button>
+                <button onclick="f(2)">x¹/ʸ</button>
+                <button onclick="f(3)">(x²+y²)½</button>
+                <button onclick="f(4)">tan⁻¹(ʸ⁄ₓ)</button>
+            </div>
+            <div class="space"></div>
+            <span>Result: </span>
+            <input id="result">
+        </div>
+        <footer>Done by Tan You Ren 2023</footer>
+    </body>
+    <script>
+        x = document.getElementById('x');
+        y = document.getElementById('y');
+        result = document.getElementById('result');
+        function f1() {
+            result.value = Math.pow(x.value, y.value)
+        }
+        function f2() {
+            result.value = Math.pow(x.value, 1 / y.value)
+        }
+        function f3() {
+            result.value = Math.pow(x.value * x.value + y.value * y.value, 0.5)
+        }
+        function f4() {
+            result.value = Math.atan(y.value / x.value)
+        }
+        function f(f){
+            if (f == 1){
+                f1()
+            }
+            if (f == 2){
+                f2()
+            }
+            if (f == 3){
+                f3()
+            }
+            if (f == 4){
+                f4()
+            }
+        }
+    </script>
+</html>
